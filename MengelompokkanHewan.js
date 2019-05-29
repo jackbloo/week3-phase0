@@ -1,6 +1,21 @@
+function sortIqbal(arr){
+  var n = arr.length-1
+  for(i = 0; i < n; i++){
+      for(j = 0; j < n; j++){
+          if(arr[j] > arr[j+1]){
+              var tampung = arr[j]
+              arr[j] = arr[j+1]
+              arr[j+1] = tampung
+          }
+      }
+    
+  }
+  return arr
+}
+
 function groupAnimals(animals) {
   // you can only write your code here!
-animals.sort(function(a,b){return a>b})
+sortIqbal(animals)
 var arr2D = [];
 for(var i = 0; i < animals.length;i++){
 
